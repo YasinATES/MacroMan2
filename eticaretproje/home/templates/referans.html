@@ -1,0 +1,28 @@
+{% extends "homebase.html" %}
+
+{% block title %} MacroMan Referanslar {% endblock %}
+{% block keywords %} MacroMan Referanslar{% endblock %}
+{% block description %} MacroMan Referanslar{% endblock %}
+
+{% block body %}
+
+    <div class="page-top-info">
+        <div class="container">
+            <h2>REFERANSLAR</h2>
+        </div>
+    </div>
+
+
+    <!-- Contact section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                {% for rs in pagedetail %}
+                    {{ rs.detailone|safe }}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Contact section end -->
+
+{% endblock %}

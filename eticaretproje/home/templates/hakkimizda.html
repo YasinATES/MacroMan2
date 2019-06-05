@@ -1,0 +1,25 @@
+{% extends "homebase.html" %}
+
+{% block title %} MacroMan Hakkımızda {% endblock %}
+{% block keywords %} MacroMan Hakkımızda{% endblock %}
+{% block description %} MacroMan Hakkımızda{% endblock %}
+
+{% block body %}
+
+    <<!-- Page info -->
+	<div class="page-top-info">
+		<div class="container">
+			<h2>HAKKIMIZDA</h2>
+		</div>
+	</div>
+	<!-- Page info end -->
+
+<!-- Page info -->
+	<div class="page-top-info">
+		<div class="container">
+            {% for rs in pagedetail %}
+                {{ rs.detailtwo|safe }}
+            {% endfor %}
+		</div>
+	</div>
+{% endblock %}

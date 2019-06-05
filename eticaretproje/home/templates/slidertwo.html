@@ -1,0 +1,33 @@
+{% load static %}
+<!-- letest product section -->
+<section class="top-letest-product-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Yeni Sezon Ürünler</h2>
+        </div>
+
+
+        <div class="product-slider owl-carousel">
+
+            {% for rs in products %}
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="{{ rs.image.url }}" alt="">
+                        <div class="pi-links">
+                            <a href="/product/{{ rs.id }}" class="add-card"><i class="flaticon-bag"></i><span>Ürüne Git</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="pi-text">
+                        <h6>{{ rs.price }}</h6>
+                        <p>{{ rs.title }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+</section>
+<!-- letest product section end -->

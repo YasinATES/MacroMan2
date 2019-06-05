@@ -1,0 +1,45 @@
+{% load static %}
+<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+
+            {% for rs in kampanya %}
+			<div class="hs-item set-bg" data-setbg="{% static 'img/bb-1.jpg'%}">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>{{ rs.baslikbir }}</span>
+							<h2>{{ rs.yazibir }}</h2>
+							<p>{{ rs.yaziiki }}</p>
+							<a href="/vitrin/" class="site-btn sb-line">Alışveriş Yap</a>
+						</div>
+					</div>
+					<div class="offer-card text-white">
+						<span>Üstelik</span>
+						<h2>%{{ rs.indirim }}</h2>
+						<p>İndirim</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="hs-item set-bg" data-setbg="{% static 'img/b-2.jpg'%}">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							<span>{{ rs.baslikiki }}</span>
+							<h2>{{ rs.yaziuc }}</h2>
+							<p>{{ rs.yaziiki }}</p>
+							<a href="/vitrin/" class="site-btn sb-line">Alışveriş Yap</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        {% endfor %}
+
+		<div class="container">
+			<div class="slide-num-holder" id="snh-1"></div>
+		</div>
+	</section>
+	<!-- Hero section end -->
